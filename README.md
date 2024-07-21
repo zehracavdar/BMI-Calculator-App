@@ -1,5 +1,14 @@
 # BMI Calculator App
 
+This repository contains my solution for BMI Calculator application assignment with Client-Server in Java
+
+---
+
+- [Assignments](#assignments)
+- [Screenshots](#screenshots)
+
+---
+
 ## Assignments
 
 ![ws2](https://github.com/user-attachments/assets/86398a92-8d6f-4a3a-828a-35eb95275a1b)
