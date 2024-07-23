@@ -11,7 +11,7 @@ class BMIClient {
         //creating gui
         JFrame frame = new JFrame("BMI Calculator");
         JPanel panel = new JPanel();
-        frame.setSize(800, 300);
+        frame.setSize(600, 200);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
