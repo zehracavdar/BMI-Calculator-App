@@ -7,10 +7,11 @@ import java.net.Socket;
 
 class BMIClient {
     public static void main(String[] args) {
+        
         //creating gui
         JFrame frame = new JFrame("BMI Calculator");
         JPanel panel = new JPanel();
-        frame.setSize(600, 200);
+        frame.setSize(800, 300);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -22,6 +23,7 @@ class BMIClient {
 
         JButton calculateButton = new JButton("Calculate");
 
+        
         //actionListener for the calculate button
         calculateButton.addActionListener(new ActionListener() {
             @Override
@@ -31,14 +33,14 @@ class BMIClient {
                         ObjectOutputStream out = new ObjectOutputStream(socket.getOutputStream());
                         ObjectInputStream in = new ObjectInputStream(socket.getInputStream())
                 ) {
-                    // sending user input to server
+                    //sending user input to server
                     double weight = Double.parseDouble(weightText.getText().trim());
                     double height = Double.parseDouble(heightText.getText().trim());
 
                     out.writeObject(weight);
                     out.writeObject(height);
 
-                    // receiving result from server
+                    //receiving result from server
                     double bmi = (double) in.readObject();
                     String category = (String) in.readObject();
 
@@ -62,7 +64,7 @@ class BMIClient {
                 resultLabel.setText("BMI Result: ");
             }
         });
-
+        
         panel.add(weightLabel);
         panel.add(weightText);
         panel.add(heightLabel);
